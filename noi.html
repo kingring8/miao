@@ -93,13 +93,29 @@ x-x%1
    var  吃掉的个数 = Math.ceil(y/x)
    console.log(n-吃掉的个数)
 </script>
-<script id="ch0103/16">
+<script type="0"id="ch0103/16">
    var  xa= Number(prompt(""))
-   var  xb=Number(prompt(''))
-   var  ya=Number (prompt(""))
+   var  ya=Number(prompt(''))
+   var  xb=Number (prompt(""))
    var  yb=Number (prompt(""))
    var dsitance =Math.sqrt((xa-xb)**2+(ya-yb)**2)
    console.log(dsitance.toFixed(3))
+</script>
+
+<script id="ch0103/17">
+   var  x1= Number(prompt(""))
+   var  y1=Number(prompt(''))
+   var  x2=Number (prompt(""))
+   var  y2=Number (prompt(""))
+   var  x3= Number(prompt(""))
+   var  y3=Number(prompt(''))
+ 
+   var  a =Math.sqrt((x1-x2)**2+(y1-y2)**2)
+   var b= Math.sqrt((x1-x3)**2+(y1-y3)**2)
+   var c=Math.sqrt((x2-x3)**2+(y2-y3)**2)
+   var p=(a+b+c)/2
+   var s=Math.sqrt(p*(p-a)*(p-b)*(p-c))
+   console.log(s.toFixed(2))
 </script>
 
 <script type="0" id="ch0104/11">
