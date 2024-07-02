@@ -223,13 +223,16 @@ if(a>=10 && a<100){
 </script>
 <script id="ch0104/09">
    var x =Number( prompt(""))
-   if(x%3 ==0){consol.log("3")
+   if(x%3 !==0 && x%5 !==0 && x%7 !==0){
+      console.log("n")
+   }else{
+      if(x%3 ==0){consol.log("3")
 
-   }else if(x%5 ==0){
+   } if(x%5 ==0){
       console.log("5")
-   }else if(x%7 ==0){
-      console.log("7")
-   }else{console.log("n")}
+   }if(x%7 ==0){
+      console.log("7")}
+   }
 </script>
 <script type="0" id="ch0104/11">
    let d=Number(prompt("1~7七天"))
