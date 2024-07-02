@@ -223,36 +223,93 @@ if(a>=10 && a<100){
 </script>
 <script id="ch0104/09">
    var x =Number( prompt(""))
-   if(x%3 !==0 && x%5 !==0 && x%7 !==0){
-      console.log("n")
-   }else{
-      if(x%3 ==0){console.log("3")
-
+   var 进去过=false
+   
+   if(x%3 ==0){console.log("3")
+   进去过=true
    } if(x%5 ==0){
       console.log("5")
+      进去过=true
    }if(x%7 ==0){
-      console.log("7")}
-   }
+      console.log("7")
+   进去过=true}
+   if(进去过!=ture){console.log("n")}
 </script>
+
+<script id="ch0104/10">
+
+   var a=Number(prompt(""))
+   var b=Number(prompt(""))
+ if(a<60 && b>=60 || a>=60 && b<60){
+   console.log("1")
+ }
+  else{console.log("0")}
+</script>
+//如果有四门课,两门不及格,\
+<script id="ch0104/10.5">
+   var a=Number(prompt(""))
+   var b=Number(prompt(""))
+   var c =Number(prompt(""))
+   var d=Number(prompt(""))
+
+   var 不及格数量=0
+   if(a<60){不及格数量=不及格数量+1}
+   if(b<60){不及格数量=不及格数量+1}
+   if(c<60){不及格数量=不及格数量+1}
+   if(d<60){不及格数量=不及格数量+1}
+
+if (不及格数量==2){
+   console.log(1)
+}else{
+   console.log(2)
+}
+
+</script>
+
+
 <script type="0" id="ch0104/11">
    let d=Number(prompt("1~7七天"))
-   if( d ==2 || d==4|| d==6|| d ==7) {console.log("Yes")}
+   if( d ==2 || d==4|| d==6|| d ==7) {console.log("YES")}
    else{console.log("NO")}
 </script>
 
+<script id="ch0104/12">
+   var s=Number(prompt(""))
+   var a=50+s/3
+   var b=s/1.2
+   if(a<b){
+      console.log("Bike")
+   }
+   if(a>b){
+      console.log("Walk")
+   }
+   if(a==b){
+      console.log("All")
+   }
+</script>
+//我感觉else,的意思就是要么要么
 <script type="0"id="ch0104/13">
-   let x=prompt('x')
+   var x=prompt('x')
+   var y
 
    if(0<=x&&x<5){y=-x+2.5}
    else if(5<=x&&x<10){y=2-1.5*(x-3)*(x-3)}
    else if(10<=x&&x<20){y=(x/2-1.5)}
    console.log(y.toFixed(3))
 </script>
-<script type="0" id="ch0104/12">
-   let distance=prompt("时间")
- let bike=distance/3+50
-   let walk=distance/1.2
-if(walk<bike){console.log("Walk")}
-   else if(walk>bike){console.log("Bike")}
-   else{console.log("All")}
-</script>
+
+
+   <script id="ch0104/14">
+      var a=Number(prompt(""))
+      var b=(prompt(""))
+     
+      var c=8
+      var d=8+Math.ceil((a-1000)/500*4)
+      var c1=8+5
+      var d1=d+5
+      if(a<=1000 && b==n){ console.log(c)}
+      if(a<=1000 && b==y){ console.log(c1)}
+      if(a>1000 && b==n){console.log(d)}
+      if(a>1000 && b==y){console.log(d1)}
+
+</script> 
