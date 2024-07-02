@@ -172,7 +172,7 @@ if(ascii%2 == 0){console.log('even')
 <script type= "0"id="ch0104/04">
    var x =prompt("")
    result =x.charCodeAt(0)
-   if (result%2 ==1){console.log("yes")
+   if (result%2 ==1){console.log("Yes")
 }else{
    console.log("NO")}
 
@@ -193,9 +193,24 @@ String.fromCharCode(60)
 
 <script id="ch0104/06">
 var a =Number( prompt(""))
-var b=Number(prompt(""))
-var c=b/a*100
-console.log(c.toFixed(3)+"%")
+
+if(a>=10 && a<100){
+   console.log("1")
+
+}else{
+   console.log("0")}
+</script>
+
+<script id="ch0104/07">
+
+   var a=Number(prompt(""))
+   var b=Number(prompt(""))
+   if(a>=10 ||b>=20){
+      console.log("1")
+   }else{
+      console.log("0")
+   }
+  
 </script>
 
 <script id="ch0104/07">
@@ -207,7 +222,6 @@ console.log(c.toFixed(3)+"%")
    var result=a*
    console.log()
 </script>
-
 <script type="0" id="ch0104/11">
    let d=Number(prompt("1~7七天"))
    if( d ==2 || d==4|| d==6|| d ==7) {console.log("Yes")}
