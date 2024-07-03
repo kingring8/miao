@@ -354,5 +354,20 @@ if(x>=-1&& X<=1 && y>=-1 && y<=1){
 <script id="ch0104/19">
    var a=Number(prompt(""))
    var b=Number(prompt(""))
-   var c =Number(prompt(""))
-   var d=Number(prompt(""))
+   var op=prompt("")
+   
+if(op == "+"){
+   console.log(a+b)
+}else if(op =="-"){
+   console.log(a-b)
+}else if(op=="*"){
+   console.log(a*b)
+}else if(op =="/"){
+   if(b!==0){
+      console.log(a/b)
+   }else{
+      console.log("Divided by zero!")
+   }
+}else{
+   console.log("Invalid operator!")
+}
