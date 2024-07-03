@@ -378,3 +378,26 @@ if(op == "+"){
    var b=Number(prompt(""))
    var c =Number(prompt(""))
    
+   var delta =b*b-4*a*c
+   if(delta ==0){
+      var x= -b/2/a
+      console.log("x1=x2"+x)
+   }else if(delta>0){
+      var x1=(-b+Math.sqrt(delta))/2/a
+      var x2=(-b+Math.sqrt(delta))/2/a
+      console.log('x1='+x1.toFixed(5)+';x2='+x2)
+   }else{
+      var x1real= -b/(2*a)
+      var x2img = Math.sqrt(-delta)/(2*a)
+      if(x1imag>=0){
+       var x1=x1real+'+'+x1imag + 'i'
+      }else{
+         var x1=''+x1real+x1imag+'i'
+      }
+      var x2real=-b/(2*a)
+      var x2img = -Math.sqrt(-delta)/(2*a)
+      if(x2img>=0){
+         var x2=''+x2real +x2imag+'i'
+      }
+      console.log('x1='+x1+';x2='+x2)
+   }
