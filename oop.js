@@ -1,7 +1,7 @@
 <script>
   
   // 表示一个二维向量
-  function Vector(x, y) {
+  /*function Vector(x, y) {
     this.x = x
     this.y = y
   }
@@ -22,8 +22,26 @@
     get: function() {
       return Math.sqrt(this.x * this.x + this.y * this.y)
     }
-  })
-
+  })*/
+class Vector{
+  constructor(x, y){
+    this.x=x;
+    this.y=y;
+  }
+  plus(v){
+    var x= this.x+v.x;
+    var y= this.y=v.y;
+    return new Vector(x,y);
+  }
+  minus(v){
+    var x= this.x-v.x
+    var y= this.y-v.y
+    return new Vector(x,y)
+  }
+  get length() {
+    return Math.sqrt(this.x*this.x+this.y*this.y)
+  }
+}
   var v1 = new Vector(1, 2)
   var v2 = new Vector(3, -4)
 
