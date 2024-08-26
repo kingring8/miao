@@ -1,4 +1,4 @@
-<script>
+
   
   // 表示一个二维向量
   /*function Vector(x, y) {
@@ -53,39 +53,40 @@ class Vector{
 
 
   // 表示一个复数(complex number)
-  function Complex(real, imag) {
-    this.real = real
-    this.imag = imag
+  class Complex {
+    constructor(real, imag) {
+      this.real = real
+      this.imag = imag
+    }
+    plus(c) {
+      var real = this.real + c.real
+      var imag = this.imag + c.imag
+      return new Complex(real, imag)
+    }
+    minus(c) {
+      var real = this.real - c.real
+      var imag = this.imag - c.imag
+      return new Complex(real, imag)
+    }
+    multiple(c) {
+      var real = this.real * c.real - this.imag * c.imag
+      var imag = this.real * c.imag + this.imag * c.real
+      return new Complex(real, imag)
+    }
+    div(c) {
+      var helper = new Complex(c.real, -c.imag)
+      var fenmu = c.multiple(helper).real
+      var fenzi = this.multiple(helper)
+  
+      var real = fenzi.real / fenmu
+      var imag = fenzi.imag / fenmu
+  
+      return new Complex(real, imag)
+    }
+    toString() {
+      return '' + this.real + (this.imag > 0 ? "+" : '') + this.imag + 'i'
+    }
   }
-  Complex.prototype.plus = function(c) {
-    var real = this.real + c.real
-    var imag = this.imag + c.imag
-    return new Complex(real, imag)
-  }
-  Complex.prototype.minus = function(c) {
-    var real = this.real - c.real
-    var imag = this.imag - c.imag
-    return new Complex(real, imag)
-  }
-  Complex.prototype.multiple = function(c) {
-    var real = this.real * c.real - this.imag * c.imag
-    var imag = this.real * c.imag + this.imag * c.real
-    return new Complex(real, imag)
-  }
-  Complex.prototype.div = function(c) {
-    var helper = new Complex(c.real, -c.imag)
-    var fenmu = c.multiple(helper).real
-    var fenzi = this.multiple(helper)
-
-    var real = fenzi.real / fenmu
-    var imag = fenzi.imag / fenmu
-
-    return new Complex(real, imag)
-  }
-  Complex.prototype.toString = function() {
-    return '' + this.real + (this.imag > 0 ? "+" : '') + this.imag + 'i'
-  }
-
   // var c1 = new Complex(4, 5)
   // var c2 = new Complex(1, -2)
 
