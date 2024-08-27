@@ -1,4 +1,4 @@
-<script>
+
   var kingring8= function() {
     function compact(array) {
       return array.filter(function(item) {
@@ -13,6 +13,8 @@
       }
       return result;
     }    
+    return{
+      compact:compact,
+      chunk:chunk
+    }
 }() 
-
-</script>
