@@ -1,6 +1,18 @@
-var kingring8 = function(){
-  function compact(array){
-    return array.filter(function(item){
-      return item !==false && item!== null&&item!==0&&item!==""&&item!==undefined&&item!==NaN;})
+
+  var kingring8 = function() {
+    function compact(array) {
+      return array.filter(function(item) {
+        return Boolean(item);
+      });
+    }
+  
+  
+
+  function chunk(array,size){
+    const result=[]
+    for(let i=0;i<array.length;i+=size){
+      result.push(array.slice(i,i+size))
+    }
+    return result
   }
 }() 
