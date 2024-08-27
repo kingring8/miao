@@ -1,5 +1,5 @@
-
-  var kingring8 = function() {
+<script>
+  var kingring8= function() {
     function compact(array) {
       return array.filter(function(item) {
         return Boolean(item);
@@ -12,6 +12,7 @@
         result.push(array.slice(i, i + size));
       }
       return result;
-    }
-    
+    }    
 }() 
+
+</script>
