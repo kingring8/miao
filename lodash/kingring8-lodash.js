@@ -49,7 +49,34 @@ var kingring8 = function() {
     }
     return result
   }
+    function flattenDepth(array,depth=1){
+    const result=[]
+    for(const item of array){
+        if(Array.isArray(item)&&depth>0){
+            result.push(...flattenDepth(item,depth-1))
+        }else{
+            result.push(item)
+        }
+    }
+    return result
+    }
+     function fromPairs(){
+        result={}
+        for(const [key,value]of pairs){
+            result[key]=value
+        }
+        return result
+     }
+     function head(array){
+        if(!array){
+            return undefined
+        }else{
+            return array[0]
+        }
+     }
+    function indexOf(){
 
+    }
 
   return {
       compact: compact,
@@ -58,6 +85,10 @@ var kingring8 = function() {
       drop: drop,
       flatten: flatten,
       flattenDeep:flattenDeep,
+      flattenDepth:flattenDepth,
+      fromPairs:fromPairs,
+      head:head,
+      indexOf:indexOf
   }
 }();
 
