@@ -25,45 +25,39 @@ var kingring8 = function() {
   function drop(array, amount = 1) {
       return array.slice(amount); // 使用 slice() 避免修改原数组
   }
-
-  function findIndex(array, predicate,formIndex=0) {
-      if(!Array.isArray(array))return -1
-  
-  for(let i=fromIndex;i<array.length;i++ ){
-    if(predicate(array[i])){
-        return i
-    }
-}
-  }
-  function findLastIndex(array, predicate) {
-      for (let i = array.length - 1; i >= 0; i--) {
-          if (predicate(array[i], i, array)) {
-              return i;
-          }
-      }
-      return -1; // 如果没有找到匹配项，返回 -1
-  }
-  
+ 
   function flatten(array) {
       let result = [];
-      array.forEach(item => {
-          if (Array.isArray(item)) {
-              result = result.concat(flatten(item));
-          } else {
-              result.push(item);
-          }
-      });
-      return result;
+     for(const item of array){
+        if(Array.isArray(item)){
+            result.push(...item)
+        }else{
+            result.push(item)
+        }
+     }
+     return result
+    }
+
+    function flattenDeep(array){
+        const result= []
+    for(const item of array){
+        if(Array.isArray(item)){
+            result.push(...flattenDeep(item))
+        }else{
+            result.push(item)
+        }
+    }
+    return result
   }
+
 
   return {
       compact: compact,
       chunk: chunk,
       fill: fill,
       drop: drop,
-      findIndex: findIndex,
-      findLastIndex: findLastIndex,
-      flatten: flatten
+      flatten: flatten,
+      flattenDeep:flattenDeep,
   }
 }();
 
