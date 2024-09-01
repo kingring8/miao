@@ -61,7 +61,7 @@ var kingring8 = function() {
     return result
     }
      function fromPairs(){
-        result={}
+     const result={}
         for(const [key,value]of pairs){
             result[key]=value
         }
@@ -74,10 +74,19 @@ var kingring8 = function() {
             return array[0]
         }
      }
-    function indexOf(){
-
+    function initial(array){
+        array.pop()
+        return array
     }
-
+    function join(array,separator=","){
+        let result=""
+        for(let i=0;i<array.length;i++){
+            result +=array[i]
+            if(i<array.length-1){
+                resutl +=seperator
+            }
+        }
+    }
   return {
       compact: compact,
       chunk: chunk,
@@ -88,7 +97,9 @@ var kingring8 = function() {
       flattenDepth:flattenDepth,
       fromPairs:fromPairs,
       head:head,
-      indexOf:indexOf
+      initial:initial,
+      join;join
+      
   }
 }();
 
