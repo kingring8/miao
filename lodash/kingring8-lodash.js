@@ -26,15 +26,15 @@ var kingring8 = function() {
       return array.slice(amount); // 使用 slice() 避免修改原数组
   }
 
-  function findIndex(array, predicate) {
-      for (let i = 0; i < array.length; i++) {
-          if (predicate(array[i], i, array)) {
-              return i;
-          }
-      }
-      return -1; // 如果没有找到匹配项，返回 -1
-  }
+  function findIndex(array, predicate,formIndex=0) {
+      if(!Array.isArray(array))return -1
   
+  for(let i=fromIndex;i<array.length;i++ ){
+    if(predicate(array[i])){
+        return i
+    }
+}
+  }
   function findLastIndex(array, predicate) {
       for (let i = array.length - 1; i >= 0; i--) {
           if (predicate(array[i], i, array)) {
