@@ -98,7 +98,7 @@ var kingring8 = function() {
       fromPairs:fromPairs,
       head:head,
       initial:initial,
-      join;join
+      join:join
       
   }
 }();
