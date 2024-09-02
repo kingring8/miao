@@ -99,6 +99,45 @@ var kingring8 = function() {
     function pull(array,...values){
             return array.filter(item=>!values.includes(item))
     }
+    function reverse(array){
+        let reversedArray=[]
+        for(let i=array.length-1;i>=0;i--){
+            reversedArray.push(array[i])
+        }
+        return reversedArray
+    }
+    function sortedIndex(array,value,compare=(a,b)=>a-b){
+     let low =0
+     let high=array.length
+     while(low<high){
+        const mid = Math.floor((low+high)/2)
+        if(compare(array[mid]),value<0){
+            low=mid+1
+        }else{
+            high=mid
+        }
+        }
+     }
+     return low
+    }
+    function union(...arrays) {
+        // 创建一个新的 Set 实例来存储唯一的值
+        const resultSet = new Set();
+        
+        // 遍历每一个传入的数组
+        arrays.forEach(array => {
+          // 遍历当前数组中的每一个元素
+          array.forEach(value => {
+            // 将元素添加到 Set 中，Set 会自动去重
+            resultSet.add(value);
+          });
+        });
+        
+        // 将 Set 转换为数组并返回
+        return Array.from(resultSet);
+      }
+
+      
   return {
       compact: compact,
       chunk: chunk,
@@ -113,7 +152,10 @@ var kingring8 = function() {
       join:join,
       last:last,
       lastIndexOf:lastIndexOf,
-      pull:pull
+      pull:pull,
+      reverse:reverse,
+      sortedIndex:sortedIndex,
+      union:union
       
   }
 }();
