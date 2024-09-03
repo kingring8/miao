@@ -147,6 +147,23 @@ var kingring8 = function() {
         return Object.prototype.toString.call(obj)===
         `[object Boolean]`
       }
+      function isDate(obj){
+        return Object.prototype.toString.call(obj)===
+        `[object Date]`
+      }
+      function isElement(obj){
+        return Object.prototype.toString.call(obj)===
+        `[object Element]`
+      }
+      function isEmpty(obj){
+        return Object.prototype.toString.call(obj)===
+        `[object Empty]`
+      }
+
+      function isEqual(obj){
+        return Object.prototype.toString.call(obj)===
+        `[object Equal`
+      }
      return {
       compact: compact,
       chunk: chunk,
@@ -167,7 +184,11 @@ var kingring8 = function() {
       union:union,
       isArray:isArray,
       isArguments:isArguments,
-      isBoolean:isBoolean 
+      isBoolean:isBoolean,
+      isDate:isDate,
+      isElement:isElement,
+      isEmpty:isEmpty,
+      isEqual:isEqual
     }
 }()
 
