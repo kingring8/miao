@@ -136,8 +136,16 @@ var kingring8 = function() {
         // 将 Set 转换为数组并返回
         return Array.from(resultSet);
       }
-
-      
+      function isArray(obj){
+        return obj instanceof Array;
+      }
+      function isArguments(obj){
+        return Object.prototype.toString.call(obj) ===`[object Arguments]` 
+      }
+      function isBoolean(obj){
+        return Object.prototype.toString.call(obj)===
+        `[object Boolean]`
+      }
   return {
       compact: compact,
       chunk: chunk,
@@ -155,7 +163,10 @@ var kingring8 = function() {
       pull:pull,
       reverse:reverse,
       sortedIndex:sortedIndex,
-      union:union
+      union:union,
+      isArray:isArray,
+      isArguments:isArguments,
+      isBoolean:isBoolean
       
   
 }();
