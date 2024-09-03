@@ -157,7 +157,7 @@ var kingring8 = function() {
       sortedIndex:sortedIndex,
       union:union
       
-  }
+  
 }();
 
                   
