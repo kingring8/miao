@@ -49,16 +49,14 @@ class Complex {
 }
 
 //表示单项链表
-class Node{
-  constructor(value){
-    this.value=value
-    this.next=null
-  }
-}
 class LinkedList {
   constructor(){
     this.head=null
     this.length=0
+  }
+  class(idx){
+    this.idx=idx
+    this.next=null
   }
   //返回链表底idx个节点的值
   at(idx){
@@ -156,9 +154,13 @@ toString(separator="->"){
   }
   return result
 }
+ get size(){
+  return this._length
+ }
 }
 //表示一个集合()
-function MySet(initalValues= []){
+class MySet{
+  constructor(initalValues= []){
   this._elements=[]
   for(var val of initalValues){
     if (!this._elements.includes(val)){
@@ -170,7 +172,7 @@ function MySet(initalValues= []){
  
 
 //向集合中添加元素
-MySet.prototype.add=function(item){
+add(item){
   if(!this._elements.includes(item)){
     this._elements.push(item)
   }
@@ -179,67 +181,36 @@ MySet.prototype.add=function(item){
 
 
 //删除
-MySet.prototype.delete= function (item){
+delete (item){
   var idx= this._elements.indexOf(item)
     if(idx>=0){
       this._elements.splice(idx, 1)
     }
   }
 //获取元素.从c.size
-Object.defineProperties(MySet.prototype,"size",{
-  get:function(){
-    return this._elements.length
-  }
-})
+get size(){
+  return this._elements.length
+}
 
 
 //清空集合中的所有元素
-MySet.prototype.clear =function (){
+clear(){
   this._elements=[]
   return this
 }
 
 
 //判断集合中是否存在某元素
-MySet.prototype.has= function (item){
+has(item){
   return this._elements.includes(item)
 }
 
 //遍历集合中的元素(顺序无所谓)
-MySet.prototype.forEach= function (func){
+forEach(func){
   for (var value of this._elements){
     func(value)
   }
 }
-
-//表达一个映射
-function MyMap(){
-this._pairs=[]
 }
-
-
-//设置key映射到val
-set:function (key,val){
-  for(var i=0;i<this._pairs.length;i+=2){
-    if(this.pairs[i]==key){
-      this._pairs[i+1]=val
-      return  this
-    }
-
-  }
-}
-
-
-
-get:function(key){
-  for(var i=0;i<this._paris.length;i+=2){
-    if(this._pairs[i]===key){
-      return this._pairs[i+1]
-    }
-  }
-  return undefined
-}
-
-//获取映射中key所对应的val
 
 
