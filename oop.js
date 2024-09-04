@@ -110,6 +110,7 @@ append(val){
   return true
 }
 
+
 //返回并删除链尾节点的值,并删除末尾第一个节点
 removeLast(){
   if(this.head ===null){
@@ -131,41 +132,113 @@ this.length--
 return value
 }
 
+
 //toArray
-LinkedList.prototype.toArray= function (idx){
+toArray(){
+let array=[]
+let current=this.head
+while(current){
+  array.push(current.value)
+  current=current.next
+}
+return array
+}
 
-
+toString(separator="->"){
+  let result=""
+  let current=this.head
+  while(current){
+    result +=current.value
+    if(current.next){
+      result +=separator
+    }
+    current=current.next
+  }
+  return result
+}
+}
 //表示一个集合()
-function Collection(initalValues){
+function MySet(initalValues= []){
+  this._elements=[]
+  for(var val of initalValues){
+    if (!this._elements.includes(val)){
+      this._element.push(val)
+    }
+  }
 
 }
+ 
+
 //向集合中添加元素
-Collection.prototype.delete= function(item){
-
+MySet.prototype.add=function(item){
+  if(!this._elements.includes(item)){
+    this._elements.push(item)
+  }
+  return this
 }
 
 
-//获取集合中的元素c.size,它是一个getter
-
+//删除
+MySet.prototype.delete= function (item){
+  var idx= this._elements.indexOf(item)
+    if(idx>=0){
+      this._elements.splice(idx, 1)
+    }
+  }
+//获取元素.从c.size
+Object.defineProperties(MySet.prototype,"size",{
+  get:function(){
+    return this._elements.length
+  }
+})
 
 
 //清空集合中的所有元素
-
+MySet.prototype.clear =function (){
+  this._elements=[]
+  return this
+}
 
 
 //判断集合中是否存在某元素
-
-//遍历集合中的元素(顺序无所谓)
-
-
-//表达一个映射
-function Map(){
-
+MySet.prototype.has= function (item){
+  return this._elements.includes(item)
 }
 
+//遍历集合中的元素(顺序无所谓)
+MySet.prototype.forEach= function (func){
+  for (var value of this._elements){
+    func(value)
+  }
+}
+
+//表达一个映射
+function MyMap(){
+this._pairs=[]
+}
+
+
 //设置key映射到val
+set:function (key,val){
+  for(var i=0;i<this._pairs.length;i+=2){
+    if(this.pairs[i]==key){
+      this._pairs[i+1]=val
+      return  this
+    }
+
+  }
+}
 
 
+
+get:function(key){
+  for(var i=0;i<this._paris.length;i+=2){
+    if(this._pairs[i]===key){
+      return this._pairs[i+1]
+    }
+  }
+  return undefined
+}
 
 //获取映射中key所对应的val
 
