@@ -17,25 +17,26 @@
     var a = Number(prompt('请输入A'))
     var b = Number(prompt('请输入B'))
     var c = Number(prompt('请输入C'))
-    var result = (a + b) / c
+    var result = Math.floor((a + b) / c)
     console.log(result)
 </script>
 <script id="ch0103/04">
     var a = Number(prompt('请输入A'))
     var b = Number(prompt('请输入B'))
-    var c = a / b
-    console.log(c)
+    var c = Math.floor(a / b)
+    var d = a % b
+    console.log(c + ' ' + d)
 </script>
 <script id="ch0103/05">
     var a = Number(prompt('请输入A'))
     var b = Number(prompt('请输入B'))
-    var c = a / b.toPRecision(9)
+    var c = a / b.toPrecision(9)
     console.log(c)
 </script>
 <script id="ch0103/06">
     var a = Number(prompt('确诊'))
     var b = Number(prompt('死亡'))
-    var c = a / b.toPRecision(3) + "%"
+    var c = a / b.toPrecision(3) + "%"
     console.log(c)
 </script>
 <script id="ch0103/07">
