@@ -36,7 +36,7 @@
 <script id="ch0103/06">
     var a = Number(prompt('确诊'))
     var b = Number(prompt('死亡'))
-    var c = b / a.toFixed(3) * 100 + "%"
+    var c = (b / a).toFixed(3) * 100 + "%"
     console.log(c)
 </script>
 <script id="ch0103/07">
@@ -118,10 +118,10 @@
     var Yb = Number(prompt("请输入点B的Y坐标 Yb:"));
 
     // 计算线段AB的长度
-    var length = Math.sqrt(Math.pow(Xb - Xa, 2) + Math.pow(Yb - Ya, 2));
+    var length = Math.sqrt(Math.pow(Xb - Xa, 2) + Math.pow(Yb - Ya, 2)).toFixed(3);
 
     // 输出结果
-    console.log("线段AB的长度是: " + length);
+    console.log(length);
 
 
 
@@ -161,7 +161,7 @@
 </script>
 <script id="ch0103/20">
     var a = prompt('请输入a')
-    var aa = Math.pow(a, 2)
+    var aa = Math.pow(2, a)
     console.log(aa)
 
 </script>
