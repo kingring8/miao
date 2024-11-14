@@ -472,10 +472,23 @@
     console.log(max - min)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/07">
+    var number = Number(prompt('请输入有几天'))
+    var gold = 0
+    var silver = 0
+    var bronze = 0
+    for (var i = 0; i < n; i++) {
+        var [g, s, b] = prompt(`请输入第${i + 1}天,金银铜情况`)
+        gold += g
+        silver += s
+        bronze += b
+    }
+    var total = gold + silver + bronze
+    console.log(`${gold} ${silver} ${bronze}`)
+
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/08">
 
 </script>
 <script id="ch0105/01">
