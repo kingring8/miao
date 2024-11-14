@@ -264,7 +264,7 @@
     var n = Number(prompt('请输入N'))
 
     var nn = n >= 0 && n < 5 ? -n + 2.5 : n >= 5 && n < 10 ? 2 - (1.5) * (n - 3) * (n - 3) : n / 2 - (1.5)
-    console.log(nn.tofixed(3))
+    console.log(nn.toFixed(3))
 
 </script>
 <script id="ch0104/14">
@@ -272,7 +272,7 @@
     var has = prompt('有没有急')
     var money = 8
     if (n > 1000) {
-        money += Math.ceil((weight - 1000) / 500 * 4)
+        money += Math.ceil((n - 1000) / 500 * 4)
     }
     if (has = "y") {
         money += 5
@@ -314,7 +314,7 @@
 </script>
 <script id="ch0104/18">
     var a = Number(prompt('请输入A'))
-    var b = Number(prompt('请输入B'))
+    var y = Number(prompt('请输入Y'))
     var ab = (a >= -1 && a <= 1) && (y >= -1 && y <= 1) ? "yes" : "no"
     console.log(ab)
 
@@ -387,29 +387,97 @@
     var x = Number(prompt('请输入的值'))
     var y = Number(prompt('请输入c的值'))
     var abc = a - Math.ceil(y / x)
-    vonsole.log(abc)
+    console.log(abc)
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
+    // 获取学生人数
+    var n = Number(prompt('请输入学生人数：'));
+    var total = 0;
+
+    // 循环获取每个学生的年龄并累加到 total
+    for (var i = 0; i < n; i++) {
+        var age = Number(prompt(`请输入第 ${i + 1} 个学生的年龄：`));
+        total += age;
+    }
+
+    // 计算平均年龄
+    var average = total / n;
+
+    // 输出结果，保留到小数点后两位
+    console.log(average.toFixed(2));
+
+
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
 
 </script>
-<script id="ch0104/04">
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
+
+</script>
+<script id="ch0105/01">
 
 </script>
