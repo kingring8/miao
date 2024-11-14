@@ -36,7 +36,7 @@
 <script id="ch0103/06">
     var a = Number(prompt('确诊'))
     var b = Number(prompt('死亡'))
-    var c = b / a.toPrecision(3) + "%"
+    var c = b / (a + b).toFixed(3) + "%"
     console.log(c)
 </script>
 <script id="ch0103/07">
@@ -45,22 +45,22 @@
     var b = Number(prompt('请输入B'))
     var c = Number(prompt('请输入C'))
     var d = Number(prompt('请输入D'))
-    var result = (a * x * x * x + b * x * x + c * x + d).toPrecision(7)
+    var result = (a * x * x * x + b * x * x + c * x + d).toFixed(7)
     console.log(result)
 
 </script>
 <script id="ch0103/08">
-    var f = Number(prompt('请输入F')).toPrecision(5)
-    var c = (5 * (f - 32) / 9).toPrecision(5)
+    var f = Number(prompt('请输入F')).toFixed(5)
+    var c = (5 * (f - 32) / 9).toFixed(5)
     console.log(c)
 
 </script>
 <script id="ch0103/09">
-    var r = Number(prompt('请输入R')).toPrecision(4)
+    var r = Number(prompt('请输入R')).toFixed(4)
     var pi = 3.14159
-    var d = (2 * r).toPrecision(4)
-    var round = (2 * pi * r).toPrecision(4)
-    var s = (pi * r * r).toPrecision(4)
+    var d = (2 * r).toFixed(4)
+    var round = (2 * pi * r).toFixed(4)
+    var s = (pi * r * r).toFixed(4)
     console.log(d, round, s)
 
 
@@ -76,27 +76,28 @@
 <script id="ch0103/11">
     var a = Number(prompt('请输入A'))
     var b = Number(prompt('请输入B'))
-    var c = a % b
+    var c = (a % b).toFixed(4)
     console.log(c)
 </script>
 <script id="ch0103/12">
     var r = Number(prompt('请输入R'))
     var pi = 3.14
-    var V = 4 / 3 * pi * Math.pow(r, 3)
+    var V = (4 / 3 * pi * Math.pow(r, 3)).toFixed(2)
     console.log(V)
 
 
 </script>
 <script id="ch0103/13">
     var number = (prompt('请输入'))
-    var backnumber = number.split('').reverse().join('') - 0
-    console.log(backnumber)
+    var backnumber = Number(number.split('').reverse().join(''));
+    console.log(backnumber);
+
 </script>
 <script id="ch0103/14">
     var h = Number(prompt('请输入H'))
     var r = Number(prompt('请输入R'))
     var pi = 3.14159
-    var yitong = Pi * r * r * h / 1000
+    var yitong = pi * r * r * h / 1000
     var tongshu = Math.trunc(Math.ceil(20 / yitong / 1000))
     console.log(tongshu)
 
