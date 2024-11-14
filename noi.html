@@ -272,7 +272,7 @@
     var has = prompt('有没有急')
     var money = 8
     if (n > 1000) {
-        money += Math.ceil((n - 1000) / 500 * 4)
+        money += Math.ceil((n - 1000) / 500) * 4
     }
     if (has = "y") {
         money += 5
@@ -425,7 +425,7 @@
 
     var total = 0
     for (var i = 0; i < n; i++) {
-        var e = prompt('')
+        var e = Number(prompt(''))
         total += e
     }
     var average = total / n
@@ -440,7 +440,7 @@
         total += int
     }
     var average = total / n
-    console.log(`${total}${average.toFixed(5)}`)
+    console.log(`${total} ${average.toFixed(5)}`)
 
 
 </script>
@@ -477,7 +477,7 @@
     var gold = 0
     var silver = 0
     var bronze = 0
-    for (var i = 0; i < n; i++) {
+    for (var i = 0; i < number; i++) {
         var [g, s, b] = prompt(`请输入第${i + 1}天,金银铜情况`)
         gold += g
         silver += s
@@ -489,6 +489,8 @@
 
 </script>
 <script id="ch0105/08">
+    var n = Number(prompt('介个边'))
+
 
 </script>
 <script id="ch0105/01">
