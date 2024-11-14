@@ -30,13 +30,13 @@
 <script id="ch0103/05">
     var a = Number(prompt('请输入A'))
     var b = Number(prompt('请输入B'))
-    var c = a / b.toPrecision(9)
+    var c = (a / b).toPrecision(9)
     console.log(c)
 </script>
 <script id="ch0103/06">
     var a = Number(prompt('确诊'))
     var b = Number(prompt('死亡'))
-    var c = a / b.toPrecision(3) + "%"
+    var c = b / a.toPrecision(3) + "%"
     console.log(c)
 </script>
 <script id="ch0103/07">
@@ -50,13 +50,13 @@
 
 </script>
 <script id="ch0103/08">
-    var f = Number(prompt('请输入F'))
-    var c = 5 * (f - 32) / 9
-    console.log(c.toPrecision(5))
+    var f = Number(prompt('请输入F')).toPrecision(5)
+    var c = (5 * (f - 32) / 9).toPrecision(5)
+    console.log(c)
 
 </script>
 <script id="ch0103/09">
-    var r = Number(prompt('请输入R'))
+    var r = Number(prompt('请输入R')).toPrecision(4)
     var pi = 3.14159
     var d = (2 * r).toPrecision(4)
     var round = (2 * pi * r).toPrecision(4)
@@ -73,19 +73,40 @@
 
 
 </script>
-<script id="ch0103/04">
+<script id="ch0103/11">
+    var a = Number(prompt('请输入A'))
+    var b = Number(prompt('请输入B'))
+    var c = a % b
+    console.log(c)
+</script>
+<script id="ch0103/12">
+    var r = Number(prompt('请输入R'))
+    var pi = 3.14
+    var V = 4 / 3 * pi * Math.pow(r, 3)
+    console.log(V)
+
 
 </script>
-<script id="ch0103/04">
+<script id="ch0103/13">
+    var number = (prompt('请输入'))
+    var backnumber = number.split('').reverse().join('') - 0
+    console.log(backnumber)
+</script>
+<script id="ch0103/14">
+    var h = Number(prompt('请输入H'))
+    var r = Number(prompt('请输入R'))
+    var pi = 3.14159
+    var yitong = Pi * r * r * h / 1000
+    var tongshu = Math.trunc(Math.ceil(20 / yitong / 1000))
+    console.log(tongshu)
 
 </script>
-<script id="ch0103/04">
-
-</script>
-<script id="ch0103/04">
-
-</script>
-<script id="ch0103/04">
+<script id="ch0103/15">
+    var n = Number(prompt('请输入N'))
+    var x = Number(prompt('请输入X'))
+    var y = Number(prompt('请输入Y'))
+    var result = n - Math.trunc(Math.ceil(y / x))
+    console.log(result)
 
 </script>
 <script id="ch0103/04">
