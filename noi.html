@@ -475,6 +475,12 @@
         var input = prompt('请输入字符串')
         var [g, s, b] = input.split(' ').map(Number)
 
+        if (isNaN(g) || isNaN(s) || isNaN(b)) {
+            console.log("输入无效，请重新输入")
+            i--; // 让 i 不增加，要求用户重新输入
+            continue;
+        }
+
         gold += g
         silver += s
         bronze += b
@@ -623,9 +629,12 @@
         }
         i++
     }
+    if (i === 20 && sum < price) {
+        console.log("Impossible");
+    }
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/17">
 
 </script>
 <script id="ch0105/01">
