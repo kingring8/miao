@@ -467,29 +467,24 @@
 
 </script>
 <script id="ch0105/07">
-    var number = Number(prompt('请输入有几天'))  // 输入天数
+    var number = Number(prompt('请输入天数'))
+    var value = 0
     var gold = 0
     var silver = 0
-    var bronze = 0
-
-    for (var i = 0; i < number; i++) {
-        var input = prompt('请输入字符串')  // 输入每一天的金银铜牌数量
-        var [g, s, b] = input.split(' ').filter(Boolean).map(Number)  // 移除空白项，并将字符串转换为数字
-
-        // 检查是否有任何一个值是NaN
-        if (isNaN(g) || isNaN(s) || isNaN(b)) {
-            console.log("输入无效，请重新输入")
-            i--;  // 让 i 不增加，要求用户重新输入
-            continue;
-        }
-
-        gold += g
-        silver += s
-        bronze += b
+    var copper = 0
+    var i = 0
+    while (i < number) {
+        gold += Number(prompt('请输入金牌数'))
+        silver += Number(prompt('请输入银牌数'))
+        copper += Number(prompt('请输入铜牌数'))
+        i++
     }
+    console.log(gold)
+    console.log(silver)
+    console.log(copper)
+    console.log(gold + silver + copper)
 
-    var total = gold + silver + bronze
-    console.log(`${gold} ${silver} ${bronze} ${total}`)
+
 
 </script>
 <script id="ch0105/08">
@@ -617,28 +612,19 @@
 
 </script>
 <script id="ch0105/16">
-    var n = Number(prompt('请输入年薪的值'));  // 输入年薪
-    var k = Number(prompt('请输入年房价增长率的值'));  // 输入年房价增长率
-    var i = 0;  // 年份计数
-    var sum = 0;  // 累积存款
-    var price = 200;  // 房子的初始价格
-
-    while (i < 20) {
-        sum += n;  // 每年增加年薪
-        price = price * (k / 100 + 1);  // 房价每年增长
-
-        // 如果存款足够买房子
-        if (sum >= price) {
-            console.log(i + 1);  // 输出第几年能买下
-            break;  // 找到答案后跳出循环
+    var n = Number(prompt('请输入N的值'))
+    var k = Number(prompt('请输入K的值'))
+    let price = 200
+    let saving = 0
+    for (let year = 1; year <= 20; year++) {
+        savings += n
+        price *= (1 + k / 100)
+        if (savings >= price) {
+            if (year < 20)
+                console.log(year)
+            else
+                console.log('Impossible')
         }
-
-        i++;  // 增加年份
-    }
-
-    // 如果20年内没有买得起房子，输出"Impossible"
-    if (i === 20 && sum < price) {
-        console.log("Impossible");
     }
 
 
