@@ -393,10 +393,11 @@
     var n = Number(prompt('人数'))
     var sum = 0
     var age
-    while (c < n) {
+    var i = 0
+    while (i < n) {
         age = Number(prompt('年龄'))
         sum += age
-        c = c + 1
+        i++
     }
     console.log((sum / n).toFixed(2))
 
@@ -473,12 +474,13 @@
     for (var i = 0; i < number; i++) {
         var input = prompt('请输入字符串')
         var [g, s, b] = input.split(' ').map(Number)
+
         gold += g
         silver += s
         bronze += b
     }
     var total = gold + silver + bronze
-    console.log(`${gold} ${silver} ${bronze}`)
+    console.log(`${gold} ${silver} ${bronze} ${total}`)
 
 
 </script>
@@ -523,7 +525,7 @@
         if (m % 17 == 0) {
             sum += m
         }
-        m += 16
+        m++
     }
     console.log(sum)
 
@@ -588,7 +590,7 @@
         n--
     }
     var result = x * (sum + 1)
-    console.log(result)
+    console.log(result.toFixed(4))
 
 </script>
 <script id="ch0105/15">
@@ -597,10 +599,10 @@
     var y = Number(prompt('请输入Y的值'))
     var sum = 1
     while (y > 0) {
-        sum *= (r / 100)
+        sum *= (1 + r / 100)
         y--
     }
-    var result = m * (sum + 1)
+    var result = Math.floor(m * sum)
     console.log(result)
 
 
