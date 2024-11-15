@@ -513,6 +513,7 @@
     if (m % 2 == 0) {
         m += 1
     }
+
     var sum = 0
     while (m <= n) {
         sum += m
@@ -524,9 +525,10 @@
     var m = Number(prompt('请输入起始值'))
     var n = Number(prompt('请输入结束值'))
     var sum = 0
-    while (m <= n) {
-        if (m % 17 == 0) {
-            sum += m
+    var i = m
+    while (i <= n) {
+        if (i % 17 == 0) {
+            sum += i
         }
         m++
     }
@@ -642,10 +644,41 @@
 
 
 </script>
-<script id="ch0105/01">
 
+<script id="ch0105/18">
+    var n = Number(prompt('请输入整数N：'));  // 读取疗法组数
+    var i = 0;
+
+    // 读取鸡尾酒疗法的数据
+    var duizhaototal = Number(prompt('请输入鸡尾酒疗法的总病例数：'));
+    var duizhaoeffective = Number(prompt('请输入鸡尾酒疗法的有效病例数：'));
+    var duizhao = (duizhaoeffective / duizhaototal) * 100;  // 计算鸡尾酒疗法的有效率
+
+    // 使用 while 循环处理 n-1 组改进疗法的数据
+    while (i < n - 1) {
+        var x = Number(prompt('请输入改进疗法的总病例数：'));
+        var y = Number(prompt('请输入改进疗法的有效病例数：'));
+        var rate = (y / x) * 100;  // 计算改进疗法的有效率
+        var cha = rate - duizhao;  // 计算差距
+
+        if (cha > 5) {
+            console.log('better');
+        } else if (cha < -5) {
+            console.log('worse');
+        } else {
+            console.log('same');
+        }
+
+        i++;  // 增加计数器
+    }
 </script>
-<script id="ch0105/01">
+
+
+
+
+
+<script id="ch0105/19">
+
 
 </script>
 <script id="ch0105/01">
