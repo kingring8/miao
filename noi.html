@@ -390,22 +390,15 @@
     console.log(abc)
 </script>
 <script id="ch0105/01">
-    // 获取学生人数
-    var n = Number(prompt('请输入学生人数：'));
-    var total = 0;
-
-    // 循环获取每个学生的年龄并累加到 total
-    for (var i = 0; i < n; i++) {
-        var age = Number(prompt(`请输入第 ${i + 1} 个学生的年龄：`));
-        total += age;
+    var n = Number(prompt('人数'))
+    var sum = 0
+    var age
+    while (c < n) {
+        age = Number(prompt('年龄'))
+        sum += age
+        c = c + 1
     }
-
-    // 计算平均年龄
-    var average = total / n;
-
-    // 输出结果，保留到小数点后两位
-    console.log(average.toFixed(2));
-
+    console.log((sum / n).toFixed(2))
 
 
 </script>
@@ -478,7 +471,8 @@
     var silver = 0
     var bronze = 0
     for (var i = 0; i < number; i++) {
-        var [g, s, b] = prompt(`请输入第${i + 1}天,金银铜情况`)
+        var input = prompt('请输入字符串')
+        var [g, s, b] = input.split(' ').map(Number)
         gold += g
         silver += s
         bronze += b
@@ -489,29 +483,127 @@
 
 </script>
 <script id="ch0105/08">
-    var n = Number(prompt('介个边'))
+    var number = Number(prompt('几边形?'))
+
+    var value = 0
+    var angle = 0
+    var count = 0
+
+    angle = (number - 2) * 180
+
+    while (count < number - 1) {
+        value = Number(prompt('请输入角度'))
+
+        angle = angle - value
+        count += 1
+    }
+
+    console.log(angle)
 
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/09">
+    var m = Number(prompt('请输入起始值'))
+    var n = Number(prompt('请输入结束值'))
+    if (m % 2 == 0) {
+        m += 1
+    }
+    var sum = 0
+    while (m <= n) {
+        sum += m
+        m += 2
+    }
+    console.log(sum)
+</script>
+<script id="ch0105/10">
+    var m = Number(prompt('请输入起始值'))
+    var n = Number(prompt('请输入结束值'))
+    var sum = 0
+    while (m <= n) {
+        if (m % 17 == 0) {
+            sum += m
+        }
+        m += 16
+    }
+    console.log(sum)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/11">
+    var k = Number(prompt('请输入正整数数量'))
+    var i = 0
+    var one = 0
+    var five = 0
+    var ten = 0
+    while (i < k) {
+        value = prompt('请输入值')
+        if (value == "1")
+            one += 1
+        if (value == "5")
+            five += 1
+        if (value == "10")
+            ten += 1
+        i++
+    }
+    console.log(one)
+    console.log(five)
+    console.log(ten)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/12">
+    var n = Number(prompt('请输入正整数数量'))
+    var target = prompt('查找目标')
+    var i = 0
+    var sum = 0
+    while (i < n) {
+        var value = prompt('请输入')
+        if (value == target)
+            sum += 1
+        i++
+    }
+    console.log(sum)
+
+
+
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/13">
+    var a = Number(prompt(''))
+    var n = Number(prompt(''))
+    var i = 1
+    var sum = 1
+    while (n > 0) {
+        sum *= a
+        n--
+    }
+    console.log(sum)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/14">
+    var x = Number(prompt('人口基数'))
+    var n = Number(prompt('年份'))
+
+    var sum = 1
+    while (n > 0) {
+        sum *= (0.0001)
+        n--
+    }
+    var result = x * (sum + 1)
+    console.log(result)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/15">
+    var r = Number(prompt('请输入R的值'))
+    var m = Number(prompt('请输入M的值'))
+    var y = Number(prompt('请输入Y的值'))
+    var sum = 1
+    while (y > 0) {
+        sum *= (r / 100)
+        y--
+    }
+    var result = m * (sum + 1)
+    console.log(result)
 
-</script>
-<script id="ch0105/01">
+
 
 </script>
 <script id="ch0105/01">
