@@ -704,45 +704,44 @@
 
 </script>
 <script id="ch0105/20">
-    var tall = Number(prompt("球高"))
-    var h = 0
-    var sum = tall
+    // 输入初始高度
+    var initialHeight = Number(prompt("请输入球的初始高度："));
 
-    while (h < 10) {
-        sum += sum * (0.5)
-        console.log(sum)
-        h++
+    // 初始化变量
+    var totalDistance = 0; // 总经过的距离
+    var currentHeight = initialHeight; // 当前的弹跳高度
+
+    // 模拟计算
+    for (let i = 1; i <= 10; i++) {
+        totalDistance += currentHeight; // 下落距离
+        if (i < 10) { // 第10次不再反弹
+            totalDistance += currentHeight / 2; // 上升距离
+        }
+        currentHeight /= 2; // 弹跳高度减半
     }
 
-
-    var i = 0
-    while (i < 10) {
-        tall = tall * (0.5)
-        i++
-    }
-    console.log(tall)
+    // 输出结果
+    console.log(totalDistance); // 第10次落地时总距离
+    console.log(currentHeight); // 第10次反弹高度
 
 
 </script>
 <script id="ch0105/21">
-    var input = Number(prompt('整数正'))
-    if (input === 1) {
+    var n = Number(prompt('请输入正整数'))
+    if (n === 1) {
         console.log('End')
     } else {
-        while (!input == 1) {
-            if (input % 2 == 1) {
-                let next = input * 3 + 1
-                console.log(`${input}*3+1${next}`)
-                input = next
+        while (n !== 1) {
+            if (n % 2 === 0) {
+                console.log(`${n}/2=${next}`)
+                n = next
             } else {
-                let next = input / 2
-                console.log(`${input}/2=${next}`)
-                input = next
+                let next = n * 3 + 1
+                console.log(`${n}*3+1=${next}`)
             }
         }
         console.log('End')
     }
-
 
 
 
