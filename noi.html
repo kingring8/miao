@@ -586,16 +586,7 @@
 
 </script>
 <script id="ch0105/14">
-    var x = Number(prompt('人口基数'))
-    var n = Number(prompt('年份'))
-
-    var sum = 1
-    while (n > 0) {
-        sum *= (0.0001)
-        n--
-    }
-    var result = x * (sum + 1)
-    console.log(result.toFixed(4)) var x = +prompt('请输入人口基数')
+    var x = +prompt('请输入人口基数')
     var n = +prompt('请输入年数')
 
     var speed = 0.001 //人口增长速度
@@ -633,10 +624,12 @@
         savings += n
         price *= (1 + k / 100)
         if (savings >= price) {
-            if (year < 20)
+            if (year < 20) {
+
                 console.log(year)
-            else
+            } else {
                 console.log('Impossible')
+            }
         }
     }
 
@@ -714,6 +707,7 @@
     while (h < 10) {
         sum += sum * (0.5)
         console.log(sum)
+        h++
     }
 
 
@@ -750,7 +744,8 @@
 
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/22">
+
 
 </script>
 <script id="ch0105/01">
