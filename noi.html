@@ -621,14 +621,14 @@
     var k = Number(prompt('请输入K的值')); // 输入房价年增长率
 
     let housePrice = 200; // 初始房价200万
-    let savings = 0; // 积攒的存款
+    let savings = 50; // 积攒的存款
 
     for (let year = 1; year <= 20; year++) {
         savings += n; // 每年存下年薪
         housePrice *= (1 + k / 100); // 房价按年增长率K增长
 
         if (savings >= housePrice) { // 判断存款是否够买房
-            console.log(year); // 输出第几年可以买下
+            console.log(year + 1); // 输出第几年可以买下
             break;
         }
 
