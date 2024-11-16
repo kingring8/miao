@@ -726,7 +726,28 @@
 
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/21">
+    var input = Number(prompt('整数正'))
+    if (input === 1) {
+        console.log('End')
+    } else {
+        while (!input == 1) {
+            if (input % 2 == 1) {
+                let next = input * 3 + 1
+                console.log(`${input}*3+1${next}`)
+                input = next
+            } else {
+                let next = input / 2
+                console.log(`${input}/2=${next}`)
+                input = next
+            }
+        }
+        console.log('End')
+    }
+
+
+
+
 
 </script>
 <script id="ch0105/01">
