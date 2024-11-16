@@ -616,23 +616,26 @@
 
 </script>
 <script id="ch0105/16">
-    var n = Number(prompt('请输入N的值'))
-    var k = Number(prompt('请输入K的值'))
-    let price = 200
-    let savings = 0
-    for (let year = 1; year <= 20; year++) {
-        savings += n
-        price *= (1 + k / 100)
-        if (savings >= price) {
-            if (year < 20) {
+    // 输入两个值，年薪N和房价年增长率K
+    var n = Number(prompt('请输入N的值')); // 输入年薪
+    var k = Number(prompt('请输入K的值')); // 输入房价年增长率
 
-                console.log(year)
-            } else {
-                console.log('Impossible')
-            }
+    let housePrice = 200; // 初始房价200万
+    let savings = 0; // 积攒的存款
+
+    for (let year = 1; year <= 20; year++) {
+        savings += n; // 每年存下年薪
+        housePrice *= (1 + k / 100); // 房价按年增长率K增长
+
+        if (savings >= housePrice) { // 判断存款是否够买房
+            console.log(year); // 输出第几年可以买下
+            break;
+        }
+
+        if (year === 20) { // 20年过去了还买不起
+            console.log('Impossible');
         }
     }
-
 
 </script>
 <script id="ch0105/17">
@@ -703,7 +706,8 @@
 <script id="ch0105/20">
     var tall = Number(prompt("球高"))
     var h = 0
-    sum = tall
+    var sum = tall
+
     while (h < 10) {
         sum += sum * (0.5)
         console.log(sum)
