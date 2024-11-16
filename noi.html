@@ -689,10 +689,41 @@
 
 
 <script id="ch0105/19">
+    var n = +prompt('请输入屋顶数')
 
+    var distance = 0
+    var numPeople = 0
+    var boatSpeed = 50 //50米每分钟
+    var manSpeed = 1.5 //1.5 分钟每人
+    var time = 0
+    debugger
+    for (var i = 0; i < n; i++) {
+        var xLocation = +prompt('请输入房顶 x 轴坐标')
+        var yLocation = +prompt('请输入房顶 y 轴坐标')
+        numPeople = +prompt('请输入房顶人数')
+        distance = 2 * Math.sqrt(xLocation * xLocation + yLocation * yLocation)
+        time = Math.ceil(distance / boatSpeed + numPeople * manSpeed)
+        console.log(time)
+    }
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/20">
+    var tall = Number(prompt("球高"))
+    var h = 0
+    sum = tall
+    whle(h < 10){
+        sum += sum * (0.5)
+        console.log(sum)
+    }
+
+
+    var i = 0
+    while (i < 10) {
+        tall = tall * (0.5)
+        i++
+    }
+    console.log(tall)
+
 
 </script>
 <script id="ch0105/01">
