@@ -530,7 +530,7 @@
         if (i % 17 == 0) {
             sum += i
         }
-        m++
+        i++
     }
     console.log(sum)
 
@@ -595,7 +595,18 @@
         n--
     }
     var result = x * (sum + 1)
-    console.log(result.toFixed(4))
+    console.log(result.toFixed(4)) var x = +prompt('请输入人口基数')
+    var n = +prompt('请输入年数')
+
+    var speed = 0.001 //人口增长速度
+    var count = 0
+    while (count < n) {
+        x = x * speed + x
+
+        count += 1
+    }
+
+    console.log(x.toFixed(4))
 
 </script>
 <script id="ch0105/15">
@@ -617,11 +628,11 @@
     var n = Number(prompt('请输入N的值'))
     var k = Number(prompt('请输入K的值'))
     let price = 200
-    let saving = 0
+    let savings = 0
     for (let year = 1; year <= 20; year++) {
         savings += n
         price *= (1 + k / 100)
-        if (saving >= price) {
+        if (savings >= price) {
             if (year < 20)
                 console.log(year)
             else
