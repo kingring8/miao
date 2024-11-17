@@ -722,7 +722,7 @@
 
     // 输出结果
     console.log(totalDistance.toFixed(4)); // 第10次落地时总距离
-    console.log(currentHeight.toFixed(4)); // 第10次反弹高度
+    console.log(currentHeight.toFixed(7)); // 第10次反弹高度
 
 
 </script>
@@ -1052,7 +1052,7 @@
     var n = prompt("")
     var count = 0
     for (let i = 0; i < n; i++) {
-        let str = String(i)
+        let str = String(i).split('')
         for (let char of str) {
             if (char === "1") {
                 count++
@@ -1089,7 +1089,7 @@
             if (style === 1 || i === 0 || i === h - 1) {
                 result += fill.repeat(w)
             } else {
-                result += fill + ''.repeat(w - 2) + fill
+                result += fill + ' '.repeat(w - 2) + fill
             }
             result += '\n'
         }
