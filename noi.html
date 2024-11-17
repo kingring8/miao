@@ -1036,16 +1036,62 @@
 
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/39">
+    var n = prompt("")
+    var sum = 0
+    for (let i = 1; i <= n; i++) {
+        if (i % 7 !== 0 || n.indexOf('7') === -1) {
+            sum += i * i
+        }
+
+    }
+    console.log(sum)
+</script>
+<script id="ch0105/40">
+    var n = prompt("")
+    for (let i = 0; i < n; i++) {
+        let str = String(i)
+        for (let char of str) {
+            if (char === "1") {
+                count++
+            }
+        }
+    }
+    console.log(count)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/41">
+    var fan = promp('起始点')
+    var wei = prompt('终点')
+    for (let i = fan; i <= wei; i++) {
+        let str = String(i)
+        for (let char of str) {
+            if (char === "2") {
+                count++
+            }
+        }
+    }
 
 </script>
-<script id="ch0105/01">
-
-</script>
-<script id="ch0105/01">
+<script id="ch0105/42">
+    var h = parseInt(prompt())
+    var w = parseInt(prompt())
+    var fill = prompt()
+    var style = parseInt(prompt())
+    if (h < 3 || h > 10 || w < 5 || w > 10 || (style !== 0 || style !== 1)) {
+        console.log('不符合,请重试')
+    } else {
+        var result = ''
+        for (var i = 0; i < h; i++) {
+            if (style === 1 || i === 0 || i === h - 1) {
+                result += fill.repeat(w)
+            } else {
+                result += fill + ''.repeat(w - 2) + fill
+            }
+            result += '\n'
+        }
+    }
+    console.log(result)
 
 </script>
 <script id="ch0105/01">
