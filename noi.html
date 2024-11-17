@@ -760,15 +760,19 @@
 <script id="ch0105/23">
     var m = +prompt('库存')
     var shu = +prompt('循环数')
+    var ren = 0
     var 累计需求 = 0
     for (var i = 0; i < shu; i++) {
         var value = +prompt('')
         if (m > value) {
             m = m - value
-            shu--
+
+        } else {
+            ren++
+            continue
         }
     }
-    console.log(shu)
+    console.log(ren)
 </script>
 <script id="ch0105/24">
     var n = prompt('组数')
