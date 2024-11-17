@@ -712,7 +712,7 @@
         hh = hh / 2
     }
     var s = s - h
-    console.log(s, hh)
+    console.log(s.toFixed(4), hh.toFixed(7))
 
 
 </script>
@@ -733,31 +733,29 @@
 
 </script>
 <script id="ch0105/22">
-    var deposit = 0
-    var pocketMoney = 300
-    var times = 12
-    var budget = 0
-    var blance = 0
-    var temp = 0
-    var blance = 0 //每月的结余,也就是减去存款和预算的钱
-    var temp = 0
+    var $onhand = 0
+    var saved = 0
+    var stopped = false
+    for (i = 1; i <= 12; i++) {
+        $onhand = $onhand + 300
+        var budget = +prompt('花销')
 
-    for (var i = 0; i < times; i++) {
-        budget = +prompt((i + 1) + '月的预算是多少钱?')
-        if (pocketMoney + blance < budget) {
-            console.log('-' + (i + 1))
+        if ($onhand < budget) {
+            consolelog(-i)
             break
+            stopped = true
+        }
+        var qingsuan = $onhand - budget
+        if (qingsuan >= 100) {
+            let 零花 = qingsuan % 100
+            saved = saved + (qingsuan - 零花)
         } else {
-            blance = pocketMoney + blance - budget
-            if (blance >= 100) {
-                temp = blance - (blance % 100)
-                deposit = deposit + temp
-                blance = blance - temp
-            }
+            let 零花 = qingsuan
         }
-        if (i + 1 === times) {
-            console.log(deposit * 1.2 + blance)
-        }
+    }
+    if (!stopped) {
+        console.log(零花 + saved * 1.2)
+
     }
 
 </script>
