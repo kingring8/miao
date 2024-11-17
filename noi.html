@@ -1094,16 +1094,105 @@
     console.log(result)
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/43">
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/44">
 
 </script>
-<script id="ch0105/01">
+<script id="ch0105/45">
 
 </script>
-<script id="ch0105/01">
+<script id="narcissistic">
+    let num = parseInt(prompt('请输入一个数字'))
+    let digits = num.toString().split('')
+    let sum = 0
+    let n = digits.length
+    for (let digit of digits) {
+        sum += Math.pow(parseInt(digit), n)
+    }
+    if (sum === num) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+
+
+</script>
+<script id="narcissistics">
+    for (i = 0; i < 10000; i++) {
+        let num = parseInt(prompt('请输入一个数字'))
+        let digits = num.toString().split('')
+        let sum = 0
+        total = 0
+        let n = digits.length
+        for (let digit of digits) {
+            sum += Math.pow(parseInt(digit), n)
+        }
+        if (sum === num) {
+            total++
+        }
+    }
+    console.log(total)
+</script>
+<script id="weekday">
+
+</script>
+<script id="palindrom">
+    let num1 = parseInt(prompt(''))
+    let str = num.toString()
+    let isPalindrom = true
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            isPalindrom = false
+            break
+        }
+    }
+    if (isPalindrom) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+
+</script>
+<script id="weekday">
+    var year = prompt()
+    var month = rompt()
+
+</script>
+<script id="complete-number">
+
+</script>
+<script id="complete-numbers">
+
+</script>
+<script id="prime">
+
+</script>
+<script id="primes">
+
+</script>
+<script id="itob">
+
+</script>
+<script id="lcf&lcm">
+
+</script>
+<script id="sqrt">
+    // 获取输入的数字
+    let number = parseFloat(prompt("请输入一个正数："));
+
+    // 初始猜测值为 number / 2（可以选择其他合适的初始值）
+    let guess = number / 2;
+    let tolerance = 0.0001; // 精度，控制小数点后3位
+
+    // 使用牛顿迭代法进行计算
+    while (Math.abs(guess * guess - number) > tolerance) {
+        guess = (guess + number / guess) / 2;
+    }
+
+    // 输出结果，保留三位小数
+    console.log(`平方根为：${guess.toFixed(3)}`);
 
 </script>
 <script id="ch0105/01">
