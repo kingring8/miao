@@ -721,10 +721,10 @@
     while (n !== 1) {
         if (n % 2 == 1) {
             n = n * 3 + 1
-            console.log(n + '*3+1' + n * 3 + 1)
+            console.log(n + '*3+1=' + n * 3 + 1)
         } else if (n % 2 == 0) {
             n = n / 2
-            console.log(n + '/2' + n / 2)
+            console.log(n + '/2=' + n / 2)
         }
     }
     console.log('End')
@@ -747,10 +747,10 @@
         }
         var qingsuan = $onhand - budget
         if (qingsuan >= 100) {
-            let 零花 = qingsuan % 100
+            var 零花 = qingsuan % 100
             saved = saved + (qingsuan - 零花)
         } else {
-            let 零花 = qingsuan
+            var 零花 = qingsuan
         }
     }
     if (!stopped) {
