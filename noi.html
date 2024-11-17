@@ -721,8 +721,8 @@
     }
 
     // 输出结果
-    console.log(totalDistance.tofixed(4)); // 第10次落地时总距离
-    console.log(currentHeight.tofixed(4)); // 第10次反弹高度
+    console.log(totalDistance.toFixed(4)); // 第10次落地时总距离
+    console.log(currentHeight.toFixed(4)); // 第10次反弹高度
 
 
 </script>
@@ -791,7 +791,7 @@
         console.log('0'
         )
     } else {
-        cosole.log(`${Math.abs(m - xuqu)}`)
+        console.log(`${Math.abs(m - xuqu)}`)
     }
 
 </script>
@@ -809,6 +809,7 @@
             最长的小时 = 当前小时
         }
     }
+    cosole.log(最长的小时)
 
 
 
@@ -921,7 +922,7 @@
         }
     }
     var result = []
-    for (var i = 0; i < N; i++) {
+    for (var i = 0; i < n; i++) {
         if (!light[i]) {
             result.push(i + 1)
         }
@@ -983,7 +984,7 @@
         factorial *= i
         result += 1 / factorial
     }
-    console.log(result)
+    console.log(result.toFixed(10))
 
 
 </script>
@@ -1049,6 +1050,7 @@
 </script>
 <script id="ch0105/40">
     var n = prompt("")
+    var count = 0
     for (let i = 0; i < n; i++) {
         let str = String(i)
         for (let char of str) {
@@ -1061,8 +1063,9 @@
 
 </script>
 <script id="ch0105/41">
-    var fan = promp('起始点')
+    var fan = prompt('起始点')
     var wei = prompt('终点')
+    var count = 0
     for (let i = fan; i <= wei; i++) {
         let str = String(i)
         for (let char of str) {
@@ -1078,7 +1081,7 @@
     var w = parseInt(prompt())
     var fill = prompt()
     var style = parseInt(prompt())
-    if (h < 3 || h > 10 || w < 5 || w > 10 || (style !== 0 || style !== 1)) {
+    if (h < 3 || h > 10 || w < 5 || w > 10) {
         console.log('不符合,请重试')
     } else {
         var result = ''
