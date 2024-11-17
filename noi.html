@@ -720,11 +720,11 @@
     var n = prompt('n')
     while (n !== 1) {
         if (n % 2 == 1) {
-            n = n * 3 + 1
             console.log(n + '*3+1=' + n * 3 + 1)
+            n = n * 3 + 1
         } else if (n % 2 == 0) {
-            n = n / 2
             console.log(n + '/2=' + n / 2)
+            n = n / 2
         }
     }
     console.log('End')
@@ -742,8 +742,8 @@
 
         if ($onhand < budget) {
             console.log(-i)
-            break
             stopped = true
+            break
         }
         var qingsuan = $onhand - budget
         if (qingsuan >= 100) {
@@ -754,27 +754,21 @@
     }
     if (!stopped) {
         console.log($onhand + saved * 1.2)
-
     }
 
 </script>
 <script id="ch0105/23">
-    var m = +prompt('stocks')
-    var shu = +prompt('ren')
-    var i = 0
-    var xuqu = 0
-    while (i < shu) {
-        var value = +prompt('要数量')
-        xuqu += value
-        i++
+    var m = +prompt('库存')
+    var shu = +prompt('循环数')
+    var 累计需求 = 0
+    for (var i = 0; i < shu; i++) {
+        var value = +prompt('')
+        if (m > value) {
+            m = m - value
+            shu--
+        }
     }
-    if (xuqu <= m) {
-        console.log('0'
-        )
-    } else {
-        console.log(`${Math.abs(m - xuqu)}`)
-    }
-
+    console.log(shu)
 </script>
 <script id="ch0105/24">
     var n = prompt('组数')
