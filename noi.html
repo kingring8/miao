@@ -704,25 +704,15 @@
 
 </script>
 <script id="ch0105/20">
-    // 输入初始高度
-    var initialHeight = Number(prompt("请输入球的初始高度："));
-
-    // 初始化变量
-    var totalDistance = 0; // 总经过的距离
-    var currentHeight = initialHeight; // 当前的弹跳高度
-
-    // 模拟计算
-    for (let i = 1; i <= 10; i++) {
-        totalDistance += currentHeight; // 下落距离
-        if (i < 10) { // 第10次不再反弹
-            totalDistance += currentHeight / 2; // 上升距离
-        }
-        currentHeight /= 2; // 弹跳高度减半
+    var h = prompt('初始高')
+    var s = 0
+    var hh = h
+    for (var i = 0; i < 10; i++) {
+        s += hh * 2
+        hh = hh / 2
     }
-
-    // 输出结果
-    console.log(totalDistance.toFixed(4)); // 第10次落地时总距离
-    console.log(currentHeight.toFixed(7)); // 第10次反弹高度
+    var s = s - h
+    console.log(s, hh)
 
 
 </script>
