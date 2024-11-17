@@ -741,20 +741,19 @@
         var budget = +prompt('花销')
 
         if ($onhand < budget) {
-            consolelog(-i)
+            console.log(-i)
             break
             stopped = true
         }
         var qingsuan = $onhand - budget
         if (qingsuan >= 100) {
-            var 零花 = qingsuan % 100
-            saved = saved + (qingsuan - 零花)
-        } else {
-            var 零花 = qingsuan
+            var 不满百 = qingsuan % 100
+            saved = saved + (qingsuan - 不满百)
+            $onhand = 不满百
         }
     }
     if (!stopped) {
-        console.log(零花 + saved * 1.2)
+        console.log($onhand + saved * 1.2)
 
     }
 
