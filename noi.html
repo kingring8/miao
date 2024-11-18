@@ -733,27 +733,29 @@
 
 </script>
 <script id="ch0105/22">
-    var $onhand = 0
-    var saved = 0
-    var stopped = false
-    for (i = 1; i <= 12; i++) {
-        $onhand = $onhand + 300
-        var budget = +prompt('花销')
+    var deposit = 0 //存款
+    var pocketMoney = 300 //零花钱
+    var times = 12 //12 个月
+    var budget = 0 // 每月的预算
+    var blance = 0 //每月的结余,也就是减去存款和预算的钱
+    var temp = 0
 
-        if ($onhand < budget) {
-            console.log(-i)
-            stopped = true
+    for (var i = 0; i < times; i++) {
+        budget = +prompt((i + 1) + '月的预算是多少钱?')
+        if (pocketMoney + blance < budget) {
+            console.log('-' + (i + 1))
             break
+        } else {
+            blance = pocketMoney + blance - budget
+            if (blance >= 100) {
+                temp = blance - (blance % 100)
+                deposit = deposit + temp
+                blance = blance - temp
+            }
         }
-        var qingsuan = $onhand - budget
-        if (qingsuan >= 100) {
-            var 不满百 = qingsuan % 100
-            saved = saved + (qingsuan - 不满百)
-            $onhand = 不满百
+        if (i + 1 === times) {
+            console.log(deposit * 1.2 + blance)
         }
-    }
-    if (!stopped) {
-        console.log($onhand + saved * 1.2)
     }
 
 </script>
@@ -783,12 +785,13 @@
         var 舒张 = prompt()
         if (收缩 >= 90 && 收缩 <= 140 && 舒张 >= 60 && 舒张 <= 90) {
             当前小时++
+
+
+        } else {
             if (当前小时 > 最长的小时) {
                 最长的小时 = 当前小时
 
             }
-
-        } else {
             当前小时 = 0
         }
     }
@@ -798,58 +801,41 @@
 
 </script>
 <script id="ch0105/25">
-    var start = 81 // 9 进制的 100 是十进制的 81
-    var end = 342 // 7 进制的 666 是十进制的 342
-    var seven = 7
-    var nine = 9
+    for (var i = 81; i < 999; i++) {
+        // 七进制位数
+        var c7 = i % 7;                      // 七进制个位
+        var b7 = Math.floor(i / 7) % 7;      // 七进制十位
+        var a7 = Math.floor(i / 49) % 7;     // 七进制百位
 
-    var tenScale = 0 //十进制
+        // 九进制位数
+        var c9 = i % 9;                      // 九进制个位
+        var b9 = Math.floor(i / 9) % 9;      // 九进制十位
+        var a9 = Math.floor(i / 81) % 9;     // 九进制百位
 
-    var sevScaOne = 0 //7进制的第一个数
-    var sevScaTwo = 0
-    var sevScaThree = 0
-
-    var ninScaOne = 0 //3进制的第一个数
-    var ninScaTwo = 0
-    var ninScaThree = 0
-
-    var temp = 0
-    for (var i = start; i <= end; i++) {
-        sevScaOne = i % seven
-        temp = Math.trunc(i / seven)
-        sevScaTwo = temp % seven
-        temp = Math.trunc(temp / seven)
-        sevScaThree = temp % seven
-
-        ninScaOne = i % nine
-        temp = Math.trunc(i / nine)
-        ninScaTwo = temp % nine
-        temp = Math.trunc(temp / nine)
-        ninScaThree = temp % nine
-
-        if (sevScaOne === ninScaThree && sevScaTwo === ninScaTwo && sevScaThree === ninScaOne) {
-            tenScale = i
-            break
+        // 条件判断
+        if (c7 == a9 && b7 == b9 && a7 == c9) {
+            console.log("找到的数字:", i);
+            console.log("七进制表示:", "" + a7 + b7 + c7);
+            console.log("九进制表示:", "" + a9 + b9 + c9);
+            break; // 找到后退出
         }
     }
-
-    console.log(tenScale)
-    console.log(tenScale.toString(7))
-    console.log(tenScale.toString(9))
-
 
 </script>
 <script id="ch0105/26">
     var n = Number(prompt('个数'))
-    var sum = 0
-    for (let i = 0; i < n; i++) {
-        var value = prompt('值')
-        var [a, b, c, d] = value.split('')
-        if (d - a - b - c > 0) {
-            sum++
+    var count = 0
+    for (var i = 0; i < n; i++) {
+        var num = +prompt()
+        var a = num % 10
+        var b = (num - a) / 10 % 10
+        var c = (num - a - b * 10) / 100 % 10
+        var d = (num - a - b * 10 - c * 100) / 1000 % 10
+        if (a - b - c - d > 0) {
+            count++
         }
     }
-    console.log(sum)
+    console.log(count)
 </script>
 <script id="ch0105/27">
     var k = Number(prompt('阈值'))
@@ -906,7 +892,7 @@
     }
     var result = []
     for (var i = 0; i < n; i++) {
-        if (!light[i]) {
+        if (!lights[i]) {
             result.push(i + 1)
         }
     }
