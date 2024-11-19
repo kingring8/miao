@@ -838,21 +838,23 @@
     console.log(count)
 </script>
 <script id="ch0105/27">
-    var k = Number(prompt('阈值'))
-    var sum = 0
-    var n = 0
-    do {
-        n++
-        sum += 1 / n
-    } while (sum <= k)
-    console.log(n)
+    for (var i = 0; ; i++) {
+
+
+        sum += 1 / i
+        if (sum > k) {
+            break
+        }
+    }
 
 </script>
 <script id="ch0105/28">
     var abc = (prompt('abc'))
-    abc.split('').reverse().forEach(a => console.log(a))
-
-
+    for (; abc > 0;) {
+        var a = abc % 10//个位
+        console.log(a)
+        abc = (abc - a) / 10
+    }
 
 </script>
 <script id="ch0105/29">
