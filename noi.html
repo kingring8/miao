@@ -839,7 +839,7 @@
 </script>
 <script id="ch0105/27">
     var k = +prompt('')
-    var sum = 1
+    var sum = 0
     for (var i = 1; ; i++) {
 
 
@@ -935,10 +935,10 @@
     var result = 0
 
     for (var i = 1; i <= n; i++) {
-        result += 1 / i * (-1) ** i
+        result += 1 / i * (-1) ** (i - 1)
 
     }
-    console.log(result)
+    console.log(result.toFixed(4))
 </script>
 <script id="ch0105/34">
     var n = Number(prompt(''))
