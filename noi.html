@@ -858,29 +858,43 @@
 
 </script>
 <script id="ch0105/29">
-    var number = +prompt('qin')
-    var isNegative = number < 0
-    var reversedStr = Math.abs(number).toString().split('').reverse().join('')
-    var reversedNumber = +reversedStr
-    if (isNegative) {
-        reversedNumber = -reversedNumber
+    var abc = prompt('')
+    var sign = 1
+    if (n < 0) {
+        sign = -1
+        n = -n
     }
-    console.log(reversedNumber)
+    var result = 0
+    while (n > 0) {
+        var digit = n % 10
+        n = (n - digit) / 10
+        result = result * 10 + digit
+    }
+    console.log(result * sign)
+
 
 
 </script>
 <script id="ch0105/30">
-    var m = Number(prompt('请输入M的值')); // 输入年薪
-    var k = Number(prompt('请输入K的值'))
-    var isDivisibleBy19 = (m % 19 === 0)
-    var countOf3 = m.toString().split('').filter(function (digit) {
-        return digit === '3'
-    }).length
-    if (isDivisibleBy19 && countOf3 === k) {
-        console.log('YES')
-    } else {
-        console.log('NO')
+    var m = +prompt('')
+    var k = +prompt('')
+    var count = 0
+    var mm = m
+    while (mm > 0) {
+        var digit = mm % 10
+        mm = (mm - digit) / 10
+        if (digit == 3) {
+            count++
+        }
+
+
     }
+    if (m % 19 == 0 && count == k) {
+        console.log("YES")
+    } else {
+        console.log("NO")
+    }
+
 
 </script>
 <script id="ch0105/31">
@@ -903,38 +917,25 @@
 <script id="ch0105/32">
 
     var n = +prompt('请输入数量')
+    a = 1
+    b = 1
     var sum = 0
-    var numerator = 2
-    var denominator = 1
-
     for (var i = 0; i < n; i++) {
-        sum += numerator / denominator
-
-        numerator = numerator + denominator
-        denominator = numerator - denominator
+        b = b + a
+        a = b - a
+        sum += b / a
     }
-    console.log(sum.toFixed(4))
+    console.log(sum)
 </script>
 <script id="ch0105/33">
     var n = +prompt('请输入数量')
     var result = 0
-    var temp = 1
 
-    for (var i = 1; i <= n; i++) {
-        //result += ((-1) ** (i - 1)) / i
-
-        // if (i % 2 == 0) {
-        //   result += -1 / i
-        // } else {
-        //   result += 1 / i
-        // }
-
-        result += temp / i
-        temp *= -1 // 正负反转,奇数正,偶数负
+    for (var i = 0; i < n; i++) {
+        sum += 1 / i * sign * (-1) ** i
 
     }
-
-    console.log(result.toFixed(4))
+    console.log(result)
 </script>
 <script id="ch0105/34">
     var n = Number(prompt(''))
