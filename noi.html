@@ -848,6 +848,7 @@
             break
         }
     }
+    console.log(sum)
 
 </script>
 <script id="ch0105/28">
@@ -860,7 +861,7 @@
 
 </script>
 <script id="ch0105/29">
-    var abc = prompt('')
+    var n = prompt('')
     var sign = 1
     if (n < 0) {
         sign = -1
@@ -927,14 +928,14 @@
         a = b - a
         sum += b / a
     }
-    console.log(sum)
+    console.log(sum.toFixed(4))
 </script>
 <script id="ch0105/33">
     var n = +prompt('请输入数量')
     var result = 0
 
     for (var i = 0; i < n; i++) {
-        sum += 1 / i * sign * (-1) ** i
+        result += 1 / i * sign * (-1) ** i
 
     }
     console.log(result)
