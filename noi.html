@@ -1165,6 +1165,36 @@
     console.log(total)
 </script>
 <script id="weekday">
+    function isLeapYear(year) {
+        return year % 400 || (year % 4 == 0 && year % 100 !== 0)
+    }
+    function getMonthDay(year, month) {
+        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+            return 31
+        }
+        if (month == 2) {
+            if (isLeapYear(year)) {
+
+                return 29
+            } else {
+                return 28
+            }
+        }
+        return 30
+    }
+    function weekday(year, month) {
+        var totalDays = 0
+        for (var y = 1; y < year; y++)
+            if (isLeapYear(y)) {
+                totalDays += 365
+            } else {
+                totalDays += 365
+            }
+        for (var m = 1; m < month; m++) {
+            totalDays += getMonthDay(year, m)
+        }
+        return (totalDays + 1) % 7
+    }
 
 </script>
 <script id="palindrom">
